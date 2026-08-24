@@ -1,8 +1,11 @@
 console.log("Hello World");
 let humanScore = 0;
 let computerScore = 0;
+function playGame() {
 
-function getComputerChoice() {
+function playRound()  {
+
+    function getComputerChoice() {
     let num = Math.random();
     if(num >=0 || num <=0.33){
         return "rock";
@@ -23,7 +26,6 @@ let getHumanChoice = () => {
 let computerChoice = getComputerChoice();
 let humanChoice = getHumanChoice();
 
-function playRound(humanChoice,computerChoice)  {
     humanChoice.toLowerCase();
 
     if(humanChoice == computerChoice){
@@ -48,10 +50,18 @@ function playRound(humanChoice,computerChoice)  {
         computerScore++;
     }  
 }
+playRound();
+playRound();
+playRound();
+playRound();
+playRound();
 
 if(humanScore > computerScore)
     console.log("You win")
 else if(humanScore < computerScore)
-    console.log("OOps bot wins")
+    console.log("Oops bot wins")
 else
-    console.log("Oh it's a draw")
+    console.log("Oh it's a draw")   
+}
+playGame();
+
